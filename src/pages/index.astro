@@ -1,11 +1,135 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
-<Layout>
-	<Welcome />
+<Layout title="Inicio">
+  <section class="relative h-screen flex items-center justify-center overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-b from-stone-900/60 to-stone-900/40 z-10"></div>
+    <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1449158743715-0a90ebb6d2d8?auto=format&fit=crop&w=1920&q=80')] bg-cover bg-center"></div>
+    
+    <div class="relative z-20 text-center px-4 max-w-4xl mx-auto">
+      <p class="text-amber-400 tracking-[0.3em] text-sm uppercase mb-4">Casa Rural en Segovia</p>
+      <h1 class="font-serif text-5xl md:text-7xl text-white mb-6 leading-tight">
+        Mi Rinconcillo
+      </h1>
+      <p class="text-xl md:text-2xl text-stone-200 font-light mb-8 leading-relaxed">
+        Un lugar donde tu bienestar es nuestra mayor prioridad
+      </p>
+      <p class="text-stone-300 mb-10 max-w-2xl mx-auto">
+        Acogedor y confortable, ideal para desconectar de la ciudad, disfrutar de la naturaleza y respirar aire puro en un entorno privilegiado.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/la-casa" class="bg-amber-700 hover:bg-amber-800 text-white px-8 py-3 transition-all duration-300">
+          Ver la casa
+        </a>
+        <a href="/contacto" class="border-2 border-white text-white hover:bg-white hover:text-stone-900 px-8 py-3 transition-all duration-300">
+          Contactar
+        </a>
+      </div>
+    </div>
+
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 animate-bounce">
+      <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+      </svg>
+    </div>
+  </section>
+
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <p class="text-amber-700 font-semibold uppercase tracking-wider text-sm mb-2">Bienvenido</p>
+          <h2 class="font-serif text-4xl text-stone-800 mb-6">Tu refugio en Castilla</h2>
+          <p class="text-stone-600 leading-relaxed mb-6">
+            <strong class="text-stone-800">Mi Rinconcillo</strong> es una casa rehabilitada y transformada en casa rural, de fisión típica castellana, empleando para ello materiales nobles de la zona.
+          </p>
+          <p class="text-stone-600 leading-relaxed mb-8">
+            Gracias a la combinación de muebles antiguos y populares con otros más modernos, conseguimos una decoración fresca y natural. Todo lo necesario para cargar las pilas y disfrutar de la tranquilidad.
+          </p>
+          <a href="/la-casa" class="text-amber-700 hover:text-amber-800 font-semibold flex items-center gap-2">
+            Conoce la casa
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+            </svg>
+          </a>
+        </div>
+        <div class="grid grid-cols-2 gap-4">
+          <img 
+            src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=600&q=80" 
+            alt="Casa rural" 
+            class="rounded-lg shadow-lg w-full h-48 object-cover"
+          />
+          <img 
+            src="https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?auto=format&fit=crop&w=600&q=80" 
+            alt="Interior" 
+            class="rounded-lg shadow-lg w-full h-48 object-cover mt-8"
+          />
+          <img 
+            src="https://images.unsplash.com/photo-1518780664697-55e3ad937233?auto=format&fit=crop&w=600&q=80" 
+            alt="Naturaleza" 
+            class="rounded-lg shadow-lg w-full h-48 object-cover"
+          />
+          <img 
+            src="https://images.unsplash.com/photo-1510798831971-661eb04b3739?auto=format&fit=crop&w=600&q=80" 
+            alt="Chimenea" 
+            class="rounded-lg shadow-lg w-full h-48 object-cover mt-8"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20 bg-stone-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="font-serif text-4xl text-stone-800 mb-4">¿Por qué elegirnos?</h2>
+        <p class="text-stone-600 max-w-2xl mx-auto">Todo lo que necesitas para una escapada perfecta</p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-white p-8 rounded-lg shadow-md">
+          <div class="w-14 h-14 bg-amber-100 rounded-full flex items-center justify-center mb-6">
+            <svg class="w-7 h-7 text-amber-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+            </svg>
+          </div>
+          <h3 class="font-serif text-xl text-stone-800 mb-3">Casa completa</h3>
+          <p class="text-stone-600">Alquiler íntegro para hasta 5 personas. Tu propio espacio privado con todas las comodidades.</p>
+        </div>
+
+        <div class="bg-white p-8 rounded-lg shadow-md">
+          <div class="w-14 h-14 bg-amber-100 rounded-full flex items-center justify-center mb-6">
+            <svg class="w-7 h-7 text-amber-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z"/>
+            </svg>
+          </div>
+          <h3 class="font-serif text-xl text-stone-800 mb-3">Chimenea y barbacoa</h3>
+          <p class="text-stone-600">Disfruta del calor de la chimenea en invierno y de barbacoas en el patio en verano.</p>
+        </div>
+
+        <div class="bg-white p-8 rounded-lg shadow-md">
+          <div class="w-14 h-14 bg-amber-100 rounded-full flex items-center justify-center mb-6">
+            <svg class="w-7 h-7 text-amber-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+            </svg>
+          </div>
+          <h3 class="font-serif text-xl text-stone-800 mb-3">Mascotas bienvenidas</h3>
+          <p class="text-stone-600">Admitimos mascotas sin suplemento. Tu compañero de viaje también disfruta aquí.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20 bg-stone-900 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="font-serif text-4xl mb-6">¿Listo para reservar?</h2>
+      <p class="text-stone-300 mb-8 max-w-2xl mx-auto">
+        Valleruela de Pedraza te espera. Un pueblo mágico en el corazón de Segovia.
+      </p>
+      <a href="/tarifas" class="inline-block bg-amber-700 hover:bg-amber-800 text-white px-8 py-3 transition-all duration-300">
+        Ver tarifas
+      </a>
+    </div>
+  </section>
 </Layout>

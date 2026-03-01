@@ -1,23 +1,145 @@
+---
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+
+const navLinks = [
+  { href: '/', label: 'Inicio' },
+  { href: '/la-casa', label: 'La Casa' },
+  { href: '/galeria', label: 'Galería' },
+  { href: '/tarifas', label: 'Tarifas' },
+  { href: '/contacto', label: 'Contacto' },
+];
+---
+
 <!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="description" content="Casa rural Mi Rinconcillo en Valleruela de Pedraza, Segovia. Alojamiento tranquilo para desconectar en plena naturaleza." />
+    <title>{title} | Mi Rinconcillo</title>
+    <link rel="preconnect" href="https://fonts <link rel="preconnect" href="https://fonts.googleapis.com">
+   .gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  </head>
+  <body class="font-sans text-stone-700 bg-stone-50">
+    <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-sm shadow-sm">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-20">
+          <a href="/" class="flex items-center">
+            <span class="font-serif text-2xl text-stone-800">Mi Rinconcillo</span>
+          </a>
+          
+          <div class="hidden md:flex space-x-8">
+            {navLinks.map(link => (
+              <a 
+                href={link.href} 
+                class="text-stone-600 hover:text-amber-700 transition-colors duration-200 font-light tracking-wide"
+              >
+                {link.label}
+              </a>
+            ))}
+          </div>
+
+          <button id="mobile-menu-btn" class="md:hidden p-2 text-stone-600">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+        <div class="px-4 py-4 space-y-3">
+          {navLinks.map(link => (
+            <a 
+              href={link.href} 
+              class="block text-stone-600 hover:text-amber-700 transition-colors py-2"
+            >
+              {link.label}
+            </a>
+          ))}
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <slot />
+    </main>
+
+    <footer class="bg-stone-900 text-stone-300 py-12">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div>
+            <h3 class="font-serif text-xl text-white mb-4">Mi Rinconcillo</h3>
+            <p class="text-stone-400 text-sm leading-relaxed">
+              Casa rural en Valleruela de Pedraza, Segovia.<br>
+              Un lugar donde tu bienestar es nuestra prioridad.
+            </p>
+          </div>
+          <div>
+            <h3 class="text-white font-semibold mb-4">Contacto</h3>
+            <p class="text-stone-400 text-sm">
+              C/ Real 10, 40174 Valleruela de Pedraza<br>
+              Segovia, Castilla y León, España
+            </p>
+            <p class="text-stone-400 text-sm mt-2">
+              +34 685 19 92 72<br>
+              +34 921 53 37 59<br>
+              info@mirinconcillo.com
+            </p>
+          </div>
+          <div>
+            <h3 class="text-white font-semibold mb-4">Enlaces</h3>
+            <div class="flex space-x-4">
+              <a href="https://www.facebook.com/pages/Mi-Rinconcillo/271047946302174" target="_blank" class="text-stone-400 hover:text-white transition-colors">
+                Facebook
+              </a>
+              <a href="https://www.youtube.com/channel/UC97toWpXCp69dx4ue5f3aMw" target="_blank" class="text-stone-400 hover:text-white transition-colors">
+                YouTube
+              </a>
+            </div>
+            <p class="text-stone-500 text-xs mt-4">
+              Registro Turismo CRA 40/385
+            </p>
+          </div>
+        </div>
+        <div class="border-t border-stone-800 mt-8 pt-8 text-center text-stone-500 text-sm">
+          <p>&copy; {new Date().getFullYear()} Mi Rinconcillo. Todos los derechos reservados.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      const btn = document.getElementById('mobile-menu-btn');
+      const menu = document.getElementById('mobile-menu');
+      
+      btn?.addEventListener('click', () => {
+        menu?.classList.toggle('hidden');
+      });
+    </script>
+  </body>
 </html>
 
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
+<style is:global>
+  :root {
+    --font-serif: 'Cormorant Garamond', serif;
+    --font-sans: 'Lato', sans-serif;
+  }
+  
+  .font-serif {
+    font-family: var(--font-serif);
+  }
+  
+  .font-sans {
+    font-family: var(--font-sans);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
 </style>
