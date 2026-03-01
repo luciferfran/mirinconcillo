@@ -1,0 +1,80 @@
+{
+  "home": {
+    "heroTitle": "Mi Rinconcillo",
+    "heroSubtitle": "Un lugar donde tu bienestar es nuestra mayor prioridad",
+    "heroDescription": "Acogedor y confortable, ideal para desconectar de la ciudad, disfrutar de la naturaleza y respirar aire puro en un entorno privilegiado.",
+    "welcomeTitle": "Tu refugio en Castilla",
+    "welcomeText": "Mi Rinconcillo es una casa rehabilitada y transformada en casa rural, de fisión típica castellana, empleando para ello materiales nobles de la zona. Gracias a la combinación de muebles antiguos y populares con otros más modernos, conseguimos una decoración fresca y natural.",
+    "features": {
+      "title": "¿Por qué elegirnos?",
+      "subtitle": "Todo lo que necesitas para una escapada perfecta"
+    }
+  },
+  "casa": {
+    "title": "La Casa",
+    "description": "Capacidad de hasta 5 personas. Se alquila de forma íntegra. Ubicada en el casco urbano, con acceso asfaltado y zona de aparcamiento.",
+    "groundFloor": {
+      "title": "Planta baja",
+      "items": [
+        {"title": "Patio con porche", "description": "Barbacoa portátil (incluye carbón), Muebles de jardín"},
+        {"title": "Salón comedor", "description": "TV con USB, Minicadena, CDs variados, Documentación de la zona, Juegos de mesa, Chimenea (leña incluida)"},
+        {"title": "Cocina equipada", "description": "Vitrocerámica y horno, Frigorífico y lavavajillas, Lavadora, Microondas, batidora, tostadora, Cafetera y tetera, Vajilla para 8 servicios"},
+        {"title": "Aseo", "description": "Productos de cortesía, Botiquín"},
+        {"title": "Calefacción", "description": "Calefacción de gasoil, Radiadores en todas las estancias, Termostato individual en habitaciones"}
+      ]
+    },
+    "firstFloor": {
+      "title": "Primera planta",
+      "items": [
+        {"title": "Habitación doble", "description": "Cama de matrimonio, Baño incluido, Champú, gel, jabón (cortesía), Secador de pelo"},
+        {"title": "Habitación individual", "description": "Cama individual, Perfecta para una persona"},
+        {"title": "Habitación individual 2", "description": "Cama individual, Perfecta para una persona"},
+        {"title": "Baño compartido", "description": "Champú, gel, jabón, Secador de pelo"}
+      ]
+    },
+    "services": {
+      "title": "Servicios adicionales",
+      "items": [
+        "Comidas / cenas por encargo (cordero asado, cochinillo, pollo...)",
+        "Servicio a domicilio sin coste",
+        "Lavandería y limpieza para quincenas y meses"
+      ],
+      "pets": "Se aceptan animales sin suplemento, bajo petición."
+    }
+  },
+  "tarifas": {
+    "title": "Tarifas y Ofertas",
+    "description": "Precios claros para tu escapada rural. Registro Turismo CRA 40/385",
+    "weekend": {
+      "title": "Fin de semana",
+      "items": [
+        {"people": "4-5 personas", "nights": "2 noches", "price": "350€"},
+        {"people": "2-3 personas", "nights": "2 noches", "price": "300€"}
+      ],
+      "note": "Incluye desayuno del primer día"
+    },
+    "bridges": {"price": "440€", "description": "3 días, casa completa", "note": "Consultar mínimo de noches"},
+    "velas": {"title": "Concierto de las Velas", "description": "Primero y segundo finde de julio", "price4": "380€", "price2": "350€"},
+    "special": {"title": "Fechas especiales", "note": "Consultar ofertas de verano", "items": [{"event": "Nochebuena / Nochevieja / Reyes", "price": "350-380€"}]},
+    "included": ["Leña para chimenea", "Carbón para barbacoa", "Desayuno primer día", "10% IVA"]
+  },
+  "contacto": {
+    "title": "Contacto",
+    "description": "Estamos aquí para ayudarte. Contacta con nosotros para reservas o información.",
+    "address": "C/ Real 10, 40174 Valleruela de Pedraza, Segovia, Castilla y León, España",
+    "phones": ["+34 685 19 92 72", "+34 921 53 37 59"],
+    "email": "info@mirinconcillo.com",
+    "registration": "Turismo CRA 40/385",
+    "routes": {
+      "title": "Cómo llegar",
+      "option1": {
+        "title": "Desde Madrid - Opción 1",
+        "description": "A1 - Burgos: Desvío en el km 99 en Santo Tomé del Puerto, por la N-110 hacia Segovia. En Arcones, dirección Pedraza, hacia La Velilla. Desde La Velilla, dirección Sepúlveda (SG-P 2322), 4,5 km."
+      },
+      "option2": {
+        "title": "Desde Madrid - Opción 2",
+        "description": "A6 - A Coruña: Tomar la SG-20 antes de Segovia y salir por la N-110 hacia Soria. Pasando La Salceda, desviarse a Sepúlveda hasta La Velilla. Desde La Velilla, dirección Sepúlveda (SG-P 2322), 4,5 km."
+      }
+    }
+  }
+}
